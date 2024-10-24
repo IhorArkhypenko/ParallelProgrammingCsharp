@@ -2,7 +2,7 @@
 
 class Program
 {
-    public static void Write(char c)
+    static void Write(char c)
     {
         int i = 1000;
         while (i-- > 0)
@@ -10,18 +10,23 @@ class Program
             Console.Write(c);
         }
     }
+
+    static void Write(object obj)
+    {
+        int i = 1000;
+        while (i-- > 0)
+        {
+            Console.Write(obj);
+        }
+    }
     
     static void Main(string[] args)
     {
-        // First way of creating and starting Task at the same time.
-        Task.Factory.StartNew(() => Write('1'));
-        
-        // Second way of creating Task without starting it.
-        var task = new Task(() => Write('2'));
-        task.Start(); // Starting of the second Task in other thread.
-        
-        Write('3'); // Operation in the main thread.
-        
+        Task.Factory.StartNew(Write, "hello");
+
+        var task = new Task(Write, 123);
+        task.Start();
+
         Console.WriteLine("Main program done.");
         Console.ReadKey();
     }
