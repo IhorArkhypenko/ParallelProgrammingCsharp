@@ -51,6 +51,6 @@ public class Program
         // AsParallelAndParallelQueryExample.Run();
         // CancellationAndExceptionsExample.Run();
         // MergeOptionsExample.Run();
-        CustomAggregationExample.Run();
+        // CustomAggregationExample.Run();
     }
 }
