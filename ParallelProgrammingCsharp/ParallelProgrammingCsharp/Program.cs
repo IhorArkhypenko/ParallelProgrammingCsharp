@@ -6,6 +6,8 @@ class Program
     {
         var cts = new CancellationTokenSource();
         var token = cts.Token;
+        
+        token.Register(() => Console.WriteLine("Cancellation requested"));
 
         var task = new Task(() =>
         {
@@ -18,6 +20,13 @@ class Program
         }, token);
 
         task.Start();
+
+        // second way to understand that task was cancelled(more complicated)
+        Task.Factory.StartNew(() =>
+        {
+            token.WaitHandle.WaitOne();
+            Console.WriteLine("Wait handle released, cancellation was requested");
+        });
 
         Console.ReadKey();
         cts.Cancel();
