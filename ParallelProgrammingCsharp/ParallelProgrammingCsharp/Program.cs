@@ -4,32 +4,26 @@ class Program
 {
     static void Main(string[] args)
     {
-        var cts = new CancellationTokenSource();
-        var token = cts.Token;
-        
-        token.Register(() => Console.WriteLine("Cancellation requested"));
+        var planned = new CancellationTokenSource();
+        var preventative = new CancellationTokenSource();
+        var emergency = new CancellationTokenSource();
 
-        var task = new Task(() =>
-        {
-            var i = 0;
-            while (true)
-            {
-                cts.Token.ThrowIfCancellationRequested();
-                Console.WriteLine($"{i++} \t");
-            }
-        }, token);
+        var paranoid = CancellationTokenSource.CreateLinkedTokenSource(planned.Token, preventative.Token, emergency.Token);
 
-        task.Start();
-
-        // second way to understand that task was cancelled(more complicated)
         Task.Factory.StartNew(() =>
         {
-            token.WaitHandle.WaitOne();
-            Console.WriteLine("Wait handle released, cancellation was requested");
+            int i = 0;
+            while (true)
+            {
+                paranoid.Token.ThrowIfCancellationRequested();
+                Console.WriteLine($"{i++}\t");
+                Thread.Sleep(1000);
+            }
         });
 
         Console.ReadKey();
-        cts.Cancel();
+        
+        paranoid.Cancel();
 
         Console.ReadKey();
     }
