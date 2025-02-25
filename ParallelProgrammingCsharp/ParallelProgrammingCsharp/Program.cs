@@ -4,27 +4,38 @@ class Program
 {
     static void Main(string[] args)
     {
-        var planned = new CancellationTokenSource();
-        var preventative = new CancellationTokenSource();
-        var emergency = new CancellationTokenSource();
+        var cts = new CancellationTokenSource();
+        var token = cts.Token;
 
-        var paranoid = CancellationTokenSource.CreateLinkedTokenSource(planned.Token, preventative.Token, emergency.Token);
-
-        Task.Factory.StartNew(() =>
+        var task = new Task(() =>
         {
-            int i = 0;
-            while (true)
+            Console.WriteLine("I take 5 seconds.");
+
+            for (int i = 0; i < 5; i++)
             {
-                paranoid.Token.ThrowIfCancellationRequested();
-                Console.WriteLine($"{i++}\t");
+                token.ThrowIfCancellationRequested();
                 Thread.Sleep(1000);
             }
-        });
 
-        Console.ReadKey();
-        
-        paranoid.Cancel();
+            Console.WriteLine("I am done!");
+        }, token);
+        task.Start();
 
+        var task2 = Task.Factory.StartNew(() => Thread.Sleep(3000), token);
+
+        // Will wait for all pending tasks.
+        // Task.WaitAll(task, task2); 
+
+        // Wait for particular task.
+        // task.Wait(token);
+
+        // Will wait for first completed task. 4000 is ms timeout(same available in WaitAll).
+        // Task.WaitAny(new[] {task, task2}, 4000, token); 
+
+        Console.WriteLine($"task status is {task.Status}");
+        Console.WriteLine($"task2 status is {task2.Status}");
+
+        Console.WriteLine("Main program done!");
         Console.ReadKey();
     }
 }
