@@ -21,5 +21,6 @@ class Program
         
         // Data sharing and synchronization.
         // CriticalSectionLockExample.Run();
+        // InterlockedExample.Run();
     }
 }
