@@ -2,49 +2,50 @@
 
 class Program
 {
-    static void Main(string[] args)
+    public class BankAccount
     {
-        try
+        public object padLock = new();
+        public int Balance { get; private set; }
+
+        public void Deposit(int amount)
         {
-            Test();
-        }
-        catch (AggregateException ae)
-        {
-            // Handling unhandled AccessViolationException.
-            foreach (var exception in ae.InnerExceptions)
+            lock (padLock)
             {
-                Console.WriteLine($"Handled elsewhere: {exception.GetType()}");
+                Balance += amount;
             }
         }
 
-        Console.WriteLine("Main program finished.");
-        Console.ReadKey();
+        public void Withdraw(int amount)
+        {
+            lock (padLock)
+            {
+                Balance -= amount;
+            }
+        }
     }
 
-    private static void Test()
+    static void Main(string[] args)
     {
-        var task1 = Task.Factory.StartNew(() => throw new InvalidOperationException("Can't do this!") { Source = "task1" });
-        var task2 = Task.Factory.StartNew(() => throw new AccessViolationException() { Source = "task2" });
+        var bankAccount = new BankAccount();
+        var taskList = new List<Task>();
 
-        try
+        for (int i = 0; i < 10; i++)
         {
-            Task.WaitAll(task1, task2);
-        }
-        catch (AggregateException ae)
-        {
-            // Way to handle only part of exceptions.
-            ae.Handle(e =>
+            for (int j = 0; j < 1000; j++)
             {
-                if (e is InvalidOperationException)
-                {
-                    Console.WriteLine("InvalidOperationException!");
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            });
+                var task = Task.Factory.StartNew(() => bankAccount.Deposit(100));
+                taskList.Add(task);
+            }
+
+            for (int j = 0; j < 1000; j++)
+            {
+                var task = Task.Factory.StartNew(() => bankAccount.Withdraw(100));
+                taskList.Add(task);
+            }
         }
+
+        Task.WaitAll(taskList.ToArray());
+
+        Console.WriteLine($"Balance: {bankAccount.Balance}");
     }
 }
