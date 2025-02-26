@@ -2,7 +2,7 @@
 
 public class CreateAndRunTask
 {
-    static int TextLengh(object? o)
+    private static int TextLengh(object? o)
     {
         Console.WriteLine($"Task {Task.CurrentId} processing object {o}...");
         return o.ToString().Length;

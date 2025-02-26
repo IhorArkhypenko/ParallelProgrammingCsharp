@@ -2,13 +2,14 @@
 
 public class CriticalSection
 {
-    public class BankAccount
+    private class BankAccount
     {
-        public object padLock = new();
+        private readonly object padLock = new();
         public int Balance { get; private set; }
 
         public void Deposit(int amount)
         {
+            // Lock is syntax sugar. Monitor.Enter() and Monitor.Exit() methods will be called.
             lock (padLock)
             {
                 Balance += amount;
