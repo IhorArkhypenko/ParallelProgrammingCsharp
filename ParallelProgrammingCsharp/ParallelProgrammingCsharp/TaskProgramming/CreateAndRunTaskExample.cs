@@ -1,6 +1,6 @@
 ﻿namespace ParallelProgrammingCsharp.TaskProgramming;
 
-public class CreateAndRunTask
+public class CreateAndRunTaskExample
 {
     private static int TextLengh(object? o)
     {

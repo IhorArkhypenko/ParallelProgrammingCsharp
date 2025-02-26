@@ -1,6 +1,6 @@
 ﻿namespace ParallelProgrammingCsharp.DataSharingAndSynchronization;
 
-public class CriticalSection
+public class CriticalSectionLockExample
 {
     private class BankAccount
     {

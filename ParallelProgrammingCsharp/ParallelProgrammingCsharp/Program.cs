@@ -12,14 +12,14 @@ class Program
         // Uncomment line of code you want to run.
         
         // Task programming.
-        // CreateAndRunTask.Run();
-        // TaskCancellation.Run();
-        // LinkedTokenSource.Run();
+        // CreateAndRunTaskExample.Run();
+        // TaskCancellationExample.Run();
+        // LinkedTokenSourceExample.Run();
         // WaitForATaskCompletionExample.Run(); // Need to uncomment one way to wait in method.
         // TaskExceptionHandlingExample.Run();
         // TaskAggregateExceptionHandleExample.Run();
         
         // Data sharing and synchronization.
-        // CriticalSection.Run();
+        // CriticalSectionLockExample.Run();
     }
 }
