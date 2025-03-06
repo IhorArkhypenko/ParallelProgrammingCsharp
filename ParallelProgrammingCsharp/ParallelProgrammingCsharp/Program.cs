@@ -10,7 +10,7 @@ class Program
     static void Main(string[] args)
     {
         // Uncomment line of code you want to run.
-        
+
         // Task programming.
         // CreateAndRunTaskExample.Run();
         // TaskCancellationExample.Run();
@@ -18,9 +18,11 @@ class Program
         // WaitForATaskCompletionExample.Run(); // Need to uncomment one way to wait in method.
         // TaskExceptionHandlingExample.Run();
         // TaskAggregateExceptionHandleExample.Run();
-        
+
         // Data sharing and synchronization.
         // CriticalSectionLockExample.Run();
         // InterlockedExample.Run();
+        // SingleMutexExample.Run();
+        // MultipleMutexExample.Run();
     }
 }
