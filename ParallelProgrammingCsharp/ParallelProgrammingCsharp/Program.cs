@@ -31,5 +31,6 @@ class Program
         // ConcurrentDictionaryExample.Run();
         // ConcurrentQueueExample.Run();
         // ConcurrentStackExample.Run();
+        // ConcurrentBagExample.Run();
     }
 }
