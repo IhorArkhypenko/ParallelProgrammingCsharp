@@ -1,6 +1,6 @@
 ﻿namespace ParallelProgrammingCsharp.TaskCoordination;
 
-public class ContinuationsExample
+public class ContinuationsExample : IExample
 {
     public static void Run()
     {

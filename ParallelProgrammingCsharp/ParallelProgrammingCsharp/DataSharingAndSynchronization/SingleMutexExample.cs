@@ -1,6 +1,6 @@
 ﻿namespace ParallelProgrammingCsharp.DataSharingAndSynchronization;
 
-public class SingleMutexExample
+public class SingleMutexExample : IExample
 {
     private class BankAccount
     {

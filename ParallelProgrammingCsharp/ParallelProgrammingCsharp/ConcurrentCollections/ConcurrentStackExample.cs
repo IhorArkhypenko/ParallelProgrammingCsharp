@@ -2,7 +2,7 @@
 
 namespace ParallelProgrammingCsharp.ConcurrentCollections;
 
-public class ConcurrentStackExample
+public class ConcurrentStackExample : IExample
 {
     public static void Run()
     {

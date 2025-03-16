@@ -1,6 +1,6 @@
 ﻿namespace ParallelProgrammingCsharp.TaskProgramming.Cancellation;
 
-public class LinkedTokenSourceExample
+public class LinkedTokenSourceExample : IExample
 {
     public static void Run()
     {

@@ -1,6 +1,6 @@
 ﻿namespace ParallelProgrammingCsharp.DataSharingAndSynchronization;
 
-public class ReaderWriterLockExample
+public class ReaderWriterLockExample : IExample
 {
     private static readonly ReaderWriterLockSlim _padLock = new();
     private static readonly Random _random = new();

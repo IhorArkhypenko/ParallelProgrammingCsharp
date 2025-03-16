@@ -2,7 +2,7 @@
 
 namespace ParallelProgrammingCsharp.ConcurrentCollections;
 
-public class BlockingCollectionExample
+public class BlockingCollectionExample : IExample
 {
     private static BlockingCollection<int> _messages = new(new ConcurrentBag<int>(), 10);
     private static readonly CancellationTokenSource _cts = new();

@@ -1,6 +1,6 @@
 ﻿namespace ParallelProgrammingCsharp.DataSharingAndSynchronization;
 
-public class InterlockedExample
+public class InterlockedExample : IExample
 {
     private class BankAccount
     {

@@ -2,7 +2,7 @@
 
 namespace ParallelProgrammingCsharp.ConcurrentCollections;
 
-public class ConcurrentDictionaryExample
+public class ConcurrentDictionaryExample : IExample
 {
     private static ConcurrentDictionary<string, string> _capitals = new();
 

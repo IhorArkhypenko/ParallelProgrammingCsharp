@@ -2,7 +2,7 @@
 
 namespace ParallelProgrammingCsharp.ConcurrentCollections;
 
-public class ConcurrentQueueExample
+public class ConcurrentQueueExample : IExample
 {
     public static void Run()
     {

@@ -1,6 +1,6 @@
 ﻿namespace ParallelProgrammingCsharp.TaskProgramming;
 
-public class WaitForATaskCompletionExample
+public class WaitForATaskCompletionExample : IExample
 {
     public static void Run()
     {

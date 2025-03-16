@@ -1,6 +1,6 @@
 ﻿namespace ParallelProgrammingCsharp.TaskProgramming.ExceprionHandling;
 
-public class TaskAggregateExceptionHandleExample
+public class TaskAggregateExceptionHandleExample : IExample
 {
     public static void Run()
     {
