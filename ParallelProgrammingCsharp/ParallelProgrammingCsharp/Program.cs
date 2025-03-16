@@ -1,5 +1,4 @@
-﻿using ParallelProgrammingCsharp.DataSharingAndSynchronization;
-using ParallelProgrammingCsharp.TaskCoordination;
+using ParallelProgrammingCsharp.DataSharingAndSynchronization;
 using ParallelProgrammingCsharp.TaskProgramming;
 using ParallelProgrammingCsharp.TaskProgramming.Cancellation;
 using ParallelProgrammingCsharp.TaskProgramming.ExceprionHandling;
@@ -26,6 +25,13 @@ class Program
         // SingleMutexExample.Run();
         // MultipleMutexExample.Run();
         // ReaderWriterLockExample.Run();
+
+        // Concurrent collections.
+        // ConcurrentDictionaryExample.Run();
+        // ConcurrentQueueExample.Run();
+        // ConcurrentStackExample.Run();
+        // ConcurrentBagExample.Run();
+        // BlockingCollectionExample.Run();
 
         // Task coordination.
         // ContinuationsExample.Run();
