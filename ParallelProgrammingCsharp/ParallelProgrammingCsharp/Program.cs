@@ -1,4 +1,5 @@
 using ParallelProgrammingCsharp.DataSharingAndSynchronization;
+using ParallelProgrammingCsharp.TaskCoordination;
 using ParallelProgrammingCsharp.TaskProgramming;
 using ParallelProgrammingCsharp.TaskProgramming.Cancellation;
 using ParallelProgrammingCsharp.TaskProgramming.ExceprionHandling;
@@ -35,5 +36,6 @@ class Program
 
         // Task coordination.
         // ContinuationsExample.Run();
+        ChildTaskExample.Run();
     }
 }
