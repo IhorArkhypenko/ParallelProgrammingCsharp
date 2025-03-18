@@ -2,6 +2,7 @@
 
 namespace ParallelProgrammingCsharp.ConcurrentCollections;
 
+// Just a wrapper for other collections which implement IProducerConsumer to set fixed maxCountValue.
 public class BlockingCollectionExample : IExample
 {
     private static BlockingCollection<int> _messages = new(new ConcurrentBag<int>(), 10);

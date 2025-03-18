@@ -36,6 +36,6 @@ class Program
 
         // Task coordination.
         // ContinuationsExample.Run();
-        ChildTaskExample.Run();
+        // ChildTaskExample.Run(); // Have option to test different scenarios inside.
     }
 }
