@@ -39,5 +39,6 @@ class Program
         // ChildTaskExample.Run(); // Have option to test different scenarios inside.
         // BarrierExample.Run();
         // CountdownEventExample.Run();
+        // ResetEventExample.Run();
     }
 }
