@@ -40,5 +40,6 @@ class Program
         // BarrierExample.Run();
         // CountdownEventExample.Run();
         // ResetEventExample.Run();
+        // SemaphoreSlimExample.Run();
     }
 }
