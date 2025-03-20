@@ -12,6 +12,8 @@ class Program
     {
         // Uncomment line of code you want to run.
 
+        // DeadLockExample.Run();
+
         // Task programming.
         // CreateAndRunTaskExample.Run();
         // TaskCancellationExample.Run();
