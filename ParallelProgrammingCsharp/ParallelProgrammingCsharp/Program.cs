@@ -1,3 +1,5 @@
+using ParallelProgrammingCsharp._5.ParallelLoops;
+
 namespace ParallelProgrammingCsharp;
 
 class Program
@@ -39,6 +41,6 @@ class Program
         // SemaphoreSlimExample.Run();
 
         // Parallel loops.
-
+        // ParallelInvokeForForeachExample.Run();
     }
 }
