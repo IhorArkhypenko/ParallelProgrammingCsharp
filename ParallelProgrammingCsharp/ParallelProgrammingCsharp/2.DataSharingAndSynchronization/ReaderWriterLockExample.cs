@@ -1,4 +1,4 @@
-﻿namespace ParallelProgrammingCsharp.DataSharingAndSynchronization;
+﻿namespace ParallelProgrammingCsharp._2.DataSharingAndSynchronization;
 
 public class ReaderWriterLockExample : IExample
 {

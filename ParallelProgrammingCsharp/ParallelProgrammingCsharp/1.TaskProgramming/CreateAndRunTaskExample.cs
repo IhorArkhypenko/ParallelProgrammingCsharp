@@ -1,4 +1,4 @@
-﻿namespace ParallelProgrammingCsharp.TaskProgramming;
+﻿namespace ParallelProgrammingCsharp._1.TaskProgramming;
 
 public class CreateAndRunTaskExample : IExample
 {

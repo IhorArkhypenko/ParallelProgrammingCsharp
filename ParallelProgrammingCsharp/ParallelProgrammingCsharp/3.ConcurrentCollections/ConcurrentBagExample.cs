@@ -1,6 +1,6 @@
 ﻿using System.Collections.Concurrent;
 
-namespace ParallelProgrammingCsharp.ConcurrentCollections;
+namespace ParallelProgrammingCsharp._3.ConcurrentCollections;
 
 public class ConcurrentBagExample : IExample
 {

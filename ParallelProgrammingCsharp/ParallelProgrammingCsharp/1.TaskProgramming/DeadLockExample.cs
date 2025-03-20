@@ -1,4 +1,4 @@
-﻿namespace ParallelProgrammingCsharp.TaskProgramming;
+﻿namespace ParallelProgrammingCsharp._1.TaskProgramming;
 
 public class DeadLockExample : IExample
 {
@@ -35,7 +35,7 @@ public class DeadLockExample : IExample
         }
     }
 
-    static void Thread2Method()
+    private static void Thread2Method()
     {
         Console.WriteLine("Thread 2: Trying to grab resource B");
         lock (resourceB)

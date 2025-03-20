@@ -1,4 +1,4 @@
-﻿namespace ParallelProgrammingCsharp.TaskProgramming.ExceprionHandling;
+﻿namespace ParallelProgrammingCsharp._1.TaskProgramming.ExceprionHandling;
 
 public class TaskExceptionHandlingExample : IExample
 {

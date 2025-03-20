@@ -1,4 +1,4 @@
-﻿namespace ParallelProgrammingCsharp.TaskCoordination;
+﻿namespace ParallelProgrammingCsharp._4.TaskCoordination;
 
 public class ResetEventExample : IExample
 {

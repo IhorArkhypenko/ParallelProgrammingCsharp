@@ -1,9 +1,3 @@
-using ParallelProgrammingCsharp.DataSharingAndSynchronization;
-using ParallelProgrammingCsharp.TaskCoordination;
-using ParallelProgrammingCsharp.TaskProgramming;
-using ParallelProgrammingCsharp.TaskProgramming.Cancellation;
-using ParallelProgrammingCsharp.TaskProgramming.ExceprionHandling;
-
 namespace ParallelProgrammingCsharp;
 
 class Program
@@ -43,5 +37,8 @@ class Program
         // CountdownEventExample.Run();
         // ResetEventExample.Run();
         // SemaphoreSlimExample.Run();
+
+        // Parallel loops.
+
     }
 }

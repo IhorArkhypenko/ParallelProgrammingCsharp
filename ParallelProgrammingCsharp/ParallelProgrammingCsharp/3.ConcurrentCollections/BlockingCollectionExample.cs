@@ -1,6 +1,6 @@
 ﻿using System.Collections.Concurrent;
 
-namespace ParallelProgrammingCsharp.ConcurrentCollections;
+namespace ParallelProgrammingCsharp._3.ConcurrentCollections;
 
 // Just a wrapper for other collections which implement IProducerConsumer to set fixed maxCountValue.
 public class BlockingCollectionExample : IExample

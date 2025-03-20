@@ -1,4 +1,4 @@
-﻿namespace ParallelProgrammingCsharp.TaskProgramming.Cancellation;
+﻿namespace ParallelProgrammingCsharp._1.TaskProgramming.Cancellation;
 
 public class TaskCancellationExample : IExample
 {

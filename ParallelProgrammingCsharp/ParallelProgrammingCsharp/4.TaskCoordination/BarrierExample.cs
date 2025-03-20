@@ -1,6 +1,4 @@
-﻿using System.Threading.Channels;
-
-namespace ParallelProgrammingCsharp.TaskCoordination;
+﻿namespace ParallelProgrammingCsharp._4.TaskCoordination;
 
 public class BarrierExample : IExample
 {
