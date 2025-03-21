@@ -32,7 +32,7 @@ public class BreakingCancellationsExceptionsExample : IExample
                 // throw new Exception();
                 // state.Stop(); // Aggressive stopping of the loop. Stops execution of loop as soon as possible.
                 state.Break(); // Soft breaking of the loop. It can guarantee that started iterations will be finished and new will not be started.
-                cts.Cancel(); // If you want to cancel task this way, OperationCanceledException will be thrown and will not be converted to AggregateException.
+                // cts.Cancel(); // If you want to cancel task this way, OperationCanceledException will be thrown and will not be converted to AggregateException.
             }
         });
 

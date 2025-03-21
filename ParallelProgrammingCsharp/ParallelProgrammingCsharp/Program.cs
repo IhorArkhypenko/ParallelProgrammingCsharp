@@ -1,10 +1,11 @@
 using ParallelProgrammingCsharp._5.ParallelLoops;
+using ParallelProgrammingCsharp._6.ParallelLinq;
 
 namespace ParallelProgrammingCsharp;
 
 public class Program
 {
-    static void Main(string[] args)
+    private static void Main(string[] args)
     {
         // Uncomment line of code you want to run.
 
@@ -45,5 +46,8 @@ public class Program
         // BreakingCancellationsExceptionsExample.Run();
         // ThreadLocalStorageExample.Run();
         // PartitioningExample.Run();
+
+        // Parallel Linq.
+        // AsParallelAndParallelQueryExample.Run();
     }
 }
