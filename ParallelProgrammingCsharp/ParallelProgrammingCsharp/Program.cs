@@ -2,7 +2,7 @@ using ParallelProgrammingCsharp._5.ParallelLoops;
 
 namespace ParallelProgrammingCsharp;
 
-class Program
+public class Program
 {
     static void Main(string[] args)
     {
@@ -44,5 +44,6 @@ class Program
         // ParallelInvokeForForeachExample.Run();
         // BreakingCancellationsExceptionsExample.Run();
         // ThreadLocalStorageExample.Run();
+        // PartitioningExample.Run();
     }
 }
